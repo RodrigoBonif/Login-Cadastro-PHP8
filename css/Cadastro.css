@@ -1,0 +1,91 @@
+body {
+    background-color: #715BFC;
+    font-family: 'Kanit', sans-serif;
+}
+span {
+    color: red;
+    text-align: center;
+}
+main {
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e9e9e9;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box {
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    color: #676767;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #715BFC;
+    background-image: url(../imgs/img-PHP-Cadastro.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+p {
+    text-align: center;
+    color: #715BFC;
+    font-size: 40px;
+    margin: 0;
+}
+input {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #676767;
+    background-color: #e9e9e9;
+    outline: none;
+}
+input[type=submit] {
+    background-color: #e9e9e9;
+    border: 2px solid #715BFC;
+    color: #715BFC;
+    width: 50%;
+    font-family: 'Kanit', sans-serif;
+    font-size: 17px;
+    padding: 5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #715BFC;
+    color: #e9e9e9;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #e9e9e9;
+    border: 2px solid #715BFC;
+    width: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    color: #715BFC;
+    transition: all 0.2s ease;
+}
+a:hover {
+    background-color: #715BFC;
+    color: #e9e9e9;
+}
+.btns {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
