@@ -50,7 +50,6 @@ INSERT INTO `usuario` (`id`, `nome`, `sobrenome`, `email`, `senha`) VALUES
 (14, 'Leonardo', 'Maros', 'leo@gmail.com', '123'),
 (15, 'Guilherme', 'Albanaz', 'gui@gmail.com', '123'),
 (16, 'Leonardo', 'Maros', 'leonardo@gmail.com', '123'),
-(17, 'PEDRO', 'a', 'henrique@gmail.com', '123'),
 (18, 'Gustavo', 'Bonifácio', 'gustavo@gmail.com', '123'),
 (22, 'Veigh', 'Baby', 'veigh@gmail.com', '123');
 
