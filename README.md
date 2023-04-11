@@ -2,7 +2,7 @@
 
 <h2>Projeto feito com PHP para um sistema de login/cadastro com PHPMyAdmin e SQL</h2>
 
-<a target="blank" href="https://logar-cadastrar.000webhostapp.com/login.php">Site Hospedado</a>
+<a target="_blank" href="https://logar-cadastrar.000webhostapp.com/login.php">Site Hospedado</a>
 
 ```sql
 
