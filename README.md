@@ -5,6 +5,7 @@
 <hr>
 <a href="https://logar-cadastrar.000webhostapp.com/login.php" target="_blank">Site Hospedado</a>
 <hr>
+
 ```sql
 
 -- phpMyAdmin SQL Dump
