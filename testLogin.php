@@ -13,6 +13,8 @@
         $_SESSION['logged'] = true;
     } else {
         header('Location: login.php');
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
     } 
 } 
 ?>

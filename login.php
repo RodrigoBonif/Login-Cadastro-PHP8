@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +22,10 @@
         <form action="testLogin.php" method="POST" class="box">
             <h2>Login</h2>
             <label for="email">Email</label>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" value="<?= isset($_SESSION['email']) ? $_SESSION['email'] : '' ?>">
             <br><br>
             <label for="password">Senha</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" <?= isset($_SESSION['password']) ? $_SESSION['password'] : '' ?>>
             <br><br>
             <div class="btns">
                 <input type="submit" name="submit" id="submit" value="entrar">
