@@ -78,7 +78,7 @@
             <br>
             <div class="btns">
             <input type="submit" name="submit" id="submit" value="Cadastrar">
-            <a href="login.php">login</a>
+            <a href="logout.php">Voltar ao login</a>
             </div>
         </form>
     </main>
