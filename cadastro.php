@@ -2,14 +2,15 @@
     $erro = '';
     if (isset($_POST['submit'])) {
         if (!empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-            if (!strpos($_POST['email'], '@')){
-                $erro = "Informe um email válido";
-            } else {
             session_start();
             $name = $_POST['name'];
             $surname = $_POST['surname'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+            if (!strpos($_POST['email'], '@')){
+                $erro = "Informe um email válido";
+                $email = '';
+            } else {
             
             require_once('config.php');
             
@@ -32,7 +33,6 @@
             $erro = 'Preencha os Campos corretamente';
         }
     }
-
 
 ?>
 
@@ -58,22 +58,22 @@
             <p>Cadastro</p>
             <span><?=$erro?></span>
             <label for="name">Nome</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="<?=isset($name) ? $name : '' ?>">
 
             <br>
 
             <label for="surname">Sobrenome</label>
-            <input type="text" name="surname" id="surname">
+            <input type="text" name="surname" id="surname" value="<?=isset($surname) ? $surname : ''?>">
 
             <br>
 
             <label for="email">Email</label>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" value="<?=isset($email) ? $email : ''?>">
 
             <br>
 
             <label for="password">Senha</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" value="<?=isset($password) ? $password : ''?>">
 
             <br>
             <div class="btns">
