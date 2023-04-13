@@ -1,7 +1,7 @@
 <?php
     $name = '';
     session_start();
-    if ($_SESSION['email']) {
+    if (isset($_SESSION['email'])) {
         
     $email = $_SESSION['email'];
 
