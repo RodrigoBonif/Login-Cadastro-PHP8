@@ -2,10 +2,8 @@
     $erro = '';
     if (isset($_POST['submit'])) {
         if (!empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-            session_start();
-
             $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-            $email = addslashes(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
             $surname = filter_input(INPUT_POST, 'surname', FILTER_SANITIZE_SPECIAL_CHARS);
             $password = $_POST['password'];
             $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -15,11 +13,11 @@
             echo $surname."<br>";
             echo $hash."<br>";
 
-            if (!strpos($_POST['email'], '@')){
+            if (!strpos($email, '@') || str_contains($email,"'")){
                 $erro = "Informe um email válido";
                 $email = '';
             } else {
-            
+            $email = str_replace("'","",$email);
             require_once('config.php');
             
             $sql = "SELECT email FROM usuario WHERE email = '$email'";
@@ -30,7 +28,7 @@
                 $erro = "Email já está sendo utilizado, informe outro";
             } else {
                 $sql = "INSERT INTO usuario(nome,sobrenome,email,senha) VALUES('$name','$surname','$email','$hash')";
-                header('location: login.php');
+                header('location: logout.php');
                 $result = mysqli_query($conexao, $sql);
             }
 
