@@ -8,16 +8,14 @@
             $password = $_POST['password'];
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
-            echo $name."<br>";
-            echo $email."<br>";
-            echo $surname."<br>";
-            echo $hash."<br>";
-
-            if (!strpos($email, '@') || str_contains($email,"'")){
+            $pos = strpos($email, "'");
+            if (!strpos($email, '@')){
                 $erro = "Informe um email válido";
                 $email = '';
+            } elseif ($pos >= 0 && $pos !== false) {
+                $erro = "Email não pode conter aspas";
+                $email='';
             } else {
-            $email = str_replace("'","",$email);
             require_once('config.php');
             
             $sql = "SELECT email FROM usuario WHERE email = '$email'";
